@@ -1,0 +1,54 @@
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { FileText } from "lucide-react"
+
+export default function AdmissionPage() {
+  return (
+    <main className="min-h-screen bg-black text-white">
+      <Navigation />
+
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-10" />
+          <img src="/placeholder-user.jpg" alt="Admission" className="w-full h-full object-cover opacity-40" />
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-6 py-32">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88] mb-8">
+              <FileText className="h-4 w-4 text-[#00ff88]" />
+              <span className="text-[#00ff88] text-xs font-bold tracking-wider uppercase">
+                Join Us
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-12 text-balance">
+              Admission Process
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
+              Streamlined admission process with multiple entry points and flexible requirements for aspiring leaders.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">CAT/XAT/MAT</h3>
+                <p className="text-gray-400">Entrance exam scores</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">GD & PI</h3>
+                <p className="text-gray-400">Group discussion and interview</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Work Experience</h3>
+                <p className="text-gray-400">For executive programs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}

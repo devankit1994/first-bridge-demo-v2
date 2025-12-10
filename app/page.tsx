@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/hero-section"
+import { HomepageBlocksSection } from "@/components/homepage-blocks-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { CareerSection } from "@/components/career-section"
 import { TechnologySection } from "@/components/technology-section"
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <HeroSection />
+      <HomepageBlocksSection />
       <ExperienceSection />
       <CareerSection />
       <TechnologySection />

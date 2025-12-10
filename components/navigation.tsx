@@ -4,10 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const [programsHovered, setProgramsHovered] = useState(false);
+  const [admissionsHovered, setAdmissionsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,52 +46,109 @@ export function Navigation() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/programs"
-              className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors"
+            {/* About us dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setAboutHovered(true)}
+              onMouseLeave={() => setAboutHovered(false)}
             >
-              Programs
-            </Link>
-            <Link
-              href="/faculty"
-              className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors"
+              <Link
+                href="#"
+                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+              >
+                About us <ChevronDown className="ml-1 h-4 w-4" />
+              </Link>
+              {aboutHovered && (
+                <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
+                  <Link
+                    href="/campus"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    Campus
+                  </Link>
+                  <Link
+                    href="/faculty"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    Faculty
+                  </Link>
+                  <Link
+                    href="/faculty"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    Managing Board
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Programs dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setProgramsHovered(true)}
+              onMouseLeave={() => setProgramsHovered(false)}
             >
-              Faculty
+              <Link
+                href="#"
+                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+              >
+                Programs <ChevronDown className="ml-1 h-4 w-4" />
+              </Link>
+              {programsHovered && (
+                <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
+                  <Link
+                    href="/pgp"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    PGP
+                  </Link>
+                  <Link
+                    href="/pgp-x"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    PGP X
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Careers and placement */}
+            <Link
+              href="/career-and-placement"
+              className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors cursor-pointer"
+            >
+              Careers and placement
             </Link>
-            {isHomePage ? (
-              <>
-                <button className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors">
-                  Experience
-                </button>
-                <button className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors">
-                  Campus
-                </button>
-                <button className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors">
-                  Career
-                </button>
-              </>
-            ) : (
-              <>
-                <Link
-                  href="/#experience"
-                  className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors"
-                >
-                  Experience
-                </Link>
-                <Link
-                  href="/#campus"
-                  className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors"
-                >
-                  Campus
-                </Link>
-                <Link
-                  href="/#career"
-                  className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors"
-                >
-                  Career
-                </Link>
-              </>
-            )}
+
+            {/* Admissions dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setAdmissionsHovered(true)}
+              onMouseLeave={() => setAdmissionsHovered(false)}
+            >
+              <Link
+                href="#"
+                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+              >
+                Admissions <ChevronDown className="ml-1 h-4 w-4" />
+              </Link>
+              {admissionsHovered && (
+                <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
+                  <Link
+                    href="/admission"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    Admission process
+                  </Link>
+                  <Link
+                    href="/fees-and-scholarships"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                  >
+                    Fees and scholarship
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
 
           <Button
