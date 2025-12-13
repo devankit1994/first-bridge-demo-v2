@@ -38,11 +38,11 @@ export function FacultyExpertise() {
     <section className="py-24 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block mb-6 px-4 py-2 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-full">
-            <span className="text-[#00ff88] text-sm font-bold tracking-wider">TEACHING EXCELLENCE</span>
+          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
+            <span className="text-primary text-sm font-bold tracking-wider">TEACHING EXCELLENCE</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            What Makes Our <span className="text-[#00ff88]">Faculty</span> Exceptional
+            What Makes Our <span className="text-primary">Faculty</span> Exceptional
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto text-pretty">
             A unique blend of academic rigor and practical industry experience
@@ -55,10 +55,10 @@ export function FacultyExpertise() {
             return (
               <div
                 key={index}
-                className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-[#00ff88]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#00ff88]/10"
+                className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               >
-                <div className="w-12 h-12 bg-[#00ff88]/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-[#00ff88]" />
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-black mb-2">{area.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{area.description}</p>

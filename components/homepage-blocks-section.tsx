@@ -101,14 +101,14 @@ export function HomepageBlocksSection() {
                 className="group block"
               >
                 <div
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 h-full hover:bg-white/10 hover:border-[#00ff88]/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#00ff88]/20 animate-fade-in-up"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 h-full hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="bg-[#00ff88]/10 rounded-full p-4 mb-6 group-hover:bg-[#00ff88]/20 transition-colors">
-                      <Icon className="h-8 w-8 text-[#00ff88]" />
+                    <div className="bg-primary/10 rounded-full p-4 mb-6 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#00ff88] transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
                       {block.title}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">

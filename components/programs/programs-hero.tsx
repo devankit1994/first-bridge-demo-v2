@@ -13,14 +13,14 @@ export function ProgramsHero() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,136,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,136,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/20 mb-8">
-          <GraduationCap className="w-4 h-4 text-[#00ff88]" />
-          <span className="text-sm font-semibold text-[#00ff88]">WORLD-CLASS PROGRAMS</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <GraduationCap className="w-4 h-4 text-primary" />
+          <span className="text-sm font-semibold text-primary">WORLD-CLASS PROGRAMS</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
           Transform Your Career with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff88] to-[#00cc6a]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#00cc6a]">
             Industry-Ready
           </span>{" "}
           Programs
@@ -32,13 +32,13 @@ export function ProgramsHero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="bg-gradient-to-r from-[#00ff88] to-[#00cc6a] hover:from-[#00ff88] hover:to-[#00ff88] text-black font-bold text-base px-8 py-6 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-[#00ff88]/30">
+          <Button className="bg-gradient-to-r from-primary to-[#00cc6a] hover:from-primary hover:to-primary text-black font-bold text-base px-8 py-6 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/30">
             EXPLORE PROGRAMS
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <Button
             variant="outline"
-            className="border-2 border-white/20 hover:border-[#00ff88] text-white hover:text-[#00ff88] font-bold text-base px-8 py-6 rounded-lg transition-all hover:scale-105 bg-transparent"
+            className="border-2 border-white/20 hover:border-primary text-white hover:text-primary font-bold text-base px-8 py-6 rounded-lg transition-all hover:scale-105 bg-transparent"
           >
             DOWNLOAD BROCHURE
           </Button>
@@ -53,7 +53,7 @@ export function ProgramsHero() {
             { value: "₹12-18L", label: "Average Package" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-black text-[#00ff88] mb-2">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-black text-primary mb-2">{stat.value}</div>
               <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
             </div>
           ))}

@@ -22,13 +22,13 @@ export function CTASection() {
     <section id="apply" className="py-32 bg-gradient-to-b from-black to-[#0a0a0a] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00ff88_1px,transparent_1px),linear-gradient(to_bottom,#00ff88_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute inset-0 bg-grid-primary" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-5xl md:text-7xl font-black mb-6 text-balance">
           Ready to{" "}
-          <span className="bg-gradient-to-r from-[#00ff88] to-[#00d4aa] bg-clip-text text-transparent">Bridge</span>{" "}
+          <span className="bg-gradient-to-r from-primary to-[#00d4aa] bg-clip-text text-transparent">Bridge</span>{" "}
           Your Future?
         </h2>
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto text-pretty">
@@ -43,11 +43,11 @@ export function CTASection() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 bg-white/10 border-gray-700 text-white placeholder:text-gray-500 focus:border-[#00ff88] h-14 px-6 rounded-lg"
+            className="flex-1 bg-white/10 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary h-14 px-6 rounded-lg"
           />
           <Button
             type="submit"
-            className="bg-gradient-to-r from-[#00ff88] to-[#00d4aa] hover:from-[#00ff99] hover:to-[#00e4ba] text-black font-bold px-8 h-14 rounded-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-[#00ff88]/30 group"
+            className="bg-gradient-to-r from-primary to-[#00d4aa] hover:from-[#00ff99] hover:to-[#00e4ba] text-black font-bold px-8 h-14 rounded-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/30 group"
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

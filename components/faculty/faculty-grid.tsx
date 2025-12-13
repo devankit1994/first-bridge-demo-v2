@@ -57,7 +57,7 @@ export function FacultyGrid() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Meet Our <span className="text-[#00ff88]">Distinguished Faculty</span>
+            Meet Our <span className="text-primary">Distinguished Faculty</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto text-pretty">
             Industry veterans and academic scholars committed to your success
@@ -68,7 +68,7 @@ export function FacultyGrid() {
           {facultyMembers.map((faculty, index) => (
             <div
               key={index}
-              className="group bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#00ff88]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#00ff88]/10"
+              className="group bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
@@ -83,17 +83,17 @@ export function FacultyGrid() {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-2xl font-black mb-1">{faculty.name}</h3>
-                <p className="text-[#00ff88] font-semibold mb-4">{faculty.title}</p>
+                <p className="text-primary font-semibold mb-4">{faculty.title}</p>
 
                 {/* Credentials */}
                 <div className="flex items-start gap-2 mb-4 text-sm text-gray-400">
-                  <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#00ff88]" />
+                  <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
                   <p className="leading-relaxed">{faculty.credentials}</p>
                 </div>
 
                 {/* Experience */}
                 <div className="flex items-center gap-2 mb-4 text-sm">
-                  <Briefcase className="w-4 h-4 text-[#ff6b35]" />
+                  <Briefcase className="w-4 h-4 text-brand-orange" />
                   <span className="text-gray-400">{faculty.experience} of experience</span>
                 </div>
 
@@ -102,7 +102,7 @@ export function FacultyGrid() {
                   {faculty.expertise.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-full text-xs font-semibold text-[#00ff88]"
+                      className="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs font-semibold text-primary"
                     >
                       {skill}
                     </span>

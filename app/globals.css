@@ -10,8 +10,12 @@
   --card-foreground: oklch(1 0 0);
   --popover: oklch(0.1 0 0);
   --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.7 0.2 160);
+
+  /* Brand */
+  --primary: #00ff88;
+  --brand-orange: #ff6b35;
   --primary-foreground: oklch(0 0 0);
+
   --secondary: oklch(0.2 0 0);
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.15 0 0);
@@ -22,21 +26,24 @@
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.2 0 0);
   --input: oklch(0.2 0 0);
-  --ring: oklch(0.7 0.2 160);
-  --chart-1: oklch(0.7 0.2 160);
+
+  /* Keep related tokens consistent with brand */
+  --ring: var(--primary);
+  --chart-1: var(--primary);
   --chart-2: oklch(0.65 0.25 35);
   --chart-3: oklch(0.75 0.25 160);
   --chart-4: oklch(0.5 0.1 200);
   --chart-5: oklch(0.4 0 0);
+
   --radius: 0.75rem;
   --sidebar: oklch(0.05 0 0);
   --sidebar-foreground: oklch(1 0 0);
-  --sidebar-primary: oklch(0.7 0.2 160);
+  --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: oklch(0 0 0);
   --sidebar-accent: oklch(0.2 0 0);
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.2 0 0);
-  --sidebar-ring: oklch(0.7 0.2 160);
+  --sidebar-ring: var(--primary);
 }
 
 @theme inline {
@@ -49,6 +56,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-brand-orange: var(--brand-orange);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -123,6 +131,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Token-driven background patterns */
+.bg-grid-primary {
+  background-image: linear-gradient(to right, var(--primary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--primary) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+/* Radial wash using the primary token (avoids hardcoded RGB/RGBA) */
+.bg-radial-primary-10 {
+  background-image: radial-gradient(
+    circle at 30% 20%,
+    color-mix(in srgb, var(--primary) 10%, transparent),
+    transparent 50%
+  );
+}
+
+/* Glow shadow using the primary token */
+.shadow-glow-primary {
+  box-shadow: 0 0 30px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* Tailwind-style variant compatibility for group-hover */
+.group:hover .group-hover\:shadow-glow-primary {
+  box-shadow: 0 0 30px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -138,5 +172,5 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00ff88;
+  background: var(--primary);
 }

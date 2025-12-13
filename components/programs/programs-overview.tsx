@@ -14,7 +14,7 @@ export function ProgramsOverview() {
         "Industry mentorship from C-suite executives",
         "International immersion opportunities",
       ],
-      color: "#00ff88",
+      color: "primary",
     },
     {
       icon: Briefcase,
@@ -28,7 +28,7 @@ export function ProgramsOverview() {
         "Startup incubation support",
         "Industry certifications included",
       ],
-      color: "#ff6b35",
+      color: "brand-orange",
     },
     {
       icon: Globe,
@@ -42,7 +42,7 @@ export function ProgramsOverview() {
         "International faculty and guest lectures",
         "Foreign language training",
       ],
-      color: "#00ff88",
+      color: "primary",
     },
     {
       icon: Lightbulb,
@@ -56,7 +56,7 @@ export function ProgramsOverview() {
         "Access to state-of-the-art incubation center",
         "Pitch competitions and investor connects",
       ],
-      color: "#ff6b35",
+      color: "brand-orange",
     },
   ]
 
@@ -64,11 +64,11 @@ export function ProgramsOverview() {
     <section className="py-24 bg-gradient-to-b from-black to-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/20 mb-6">
-            <span className="text-sm font-semibold text-[#00ff88]">OUR PROGRAMS</span>
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <span className="text-sm font-semibold text-primary">OUR PROGRAMS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black mb-6">
-            Choose Your <span className="text-[#00ff88]">Path to Success</span>
+            Choose Your <span className="text-primary">Path to Success</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Each program is designed with industry input to ensure you graduate with skills that employers actually
@@ -79,25 +79,36 @@ export function ProgramsOverview() {
         <div className="grid md:grid-cols-2 gap-8">
           {programs.map((program, index) => {
             const Icon = program.icon
+
+            const isPrimary = program.color === "primary"
+            const isBrandOrange = program.color === "brand-orange"
+
+            const color = isPrimary ? "var(--primary)" : isBrandOrange ? "var(--brand-orange)" : program.color
+            const softBg = isPrimary
+              ? "color-mix(in srgb, var(--primary) 12%, transparent)"
+              : isBrandOrange
+                ? "color-mix(in srgb, var(--brand-orange) 12%, transparent)"
+                : `${program.color}20`
+
             return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 hover:border-[#00ff88]/50 transition-all duration-300 hover:scale-[1.02]"
+                className="group relative bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02]"
               >
                 <div
                   className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-20"
-                  style={{ backgroundColor: program.color }}
+                  style={{ backgroundColor: color }}
                 />
 
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: `${program.color}20` }}
+                  style={{ backgroundColor: softBg }}
                 >
-                  <Icon className="w-7 h-7" style={{ color: program.color }} />
+                  <Icon className="w-7 h-7" style={{ color }} />
                 </div>
 
                 <h3 className="text-2xl font-black mb-2">{program.title}</h3>
-                <div className="text-sm font-semibold mb-4" style={{ color: program.color }}>
+                <div className="text-sm font-semibold mb-4" style={{ color }}>
                   {program.duration}
                 </div>
 
@@ -108,7 +119,7 @@ export function ProgramsOverview() {
                     <div key={idx} className="flex items-start gap-3">
                       <div
                         className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                        style={{ backgroundColor: program.color }}
+                        style={{ backgroundColor: color }}
                       />
                       <span className="text-sm text-gray-300">{highlight}</span>
                     </div>
@@ -117,7 +128,7 @@ export function ProgramsOverview() {
 
                 <button
                   className="mt-8 text-sm font-bold hover:gap-3 flex items-center gap-2 transition-all group-hover:translate-x-1"
-                  style={{ color: program.color }}
+                  style={{ color }}
                 >
                   LEARN MORE
                   <span>→</span>

@@ -42,7 +42,7 @@ export function Navigation() {
             href="/"
             className="text-2xl font-black tracking-tight hover:opacity-80 transition-opacity"
           >
-            First <span className="text-[#00ff88]">Bridge</span>
+            First <span className="text-primary">Bridge</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -54,7 +54,7 @@ export function Navigation() {
             >
               <Link
                 href="#"
-                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+                className="text-sm font-medium text-gray-400 hover:text-primary transition-colors flex items-center cursor-pointer"
               >
                 About us <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
@@ -62,19 +62,19 @@ export function Navigation() {
                 <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
                   <Link
                     href="/campus"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     Campus
                   </Link>
                   <Link
                     href="/faculty"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     Faculty
                   </Link>
                   <Link
                     href="/faculty"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     Managing Board
                   </Link>
@@ -90,7 +90,7 @@ export function Navigation() {
             >
               <Link
                 href="#"
-                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+                className="text-sm font-medium text-gray-400 hover:text-primary transition-colors flex items-center cursor-pointer"
               >
                 Programs <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
@@ -98,13 +98,13 @@ export function Navigation() {
                 <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
                   <Link
                     href="/pgp"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     PGP
                   </Link>
                   <Link
                     href="/pgp-x"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     PGP X
                   </Link>
@@ -115,7 +115,7 @@ export function Navigation() {
             {/* Careers and placement */}
             <Link
               href="/career-and-placement"
-              className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors cursor-pointer"
+              className="text-sm font-medium text-gray-400 hover:text-primary transition-colors cursor-pointer"
             >
               Careers and placement
             </Link>
@@ -128,7 +128,7 @@ export function Navigation() {
             >
               <Link
                 href="#"
-                className="text-sm font-medium text-gray-400 hover:text-[#00ff88] transition-colors flex items-center cursor-pointer"
+                className="text-sm font-medium text-gray-400 hover:text-primary transition-colors flex items-center cursor-pointer"
               >
                 Admissions <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
@@ -136,13 +136,13 @@ export function Navigation() {
                 <div className="absolute top-full left-0 bg-black/95 backdrop-blur-xl border border-white/10 rounded-md py-2 min-w-[200px] transition-all duration-200 z-50">
                   <Link
                     href="/admission"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     Admission process
                   </Link>
                   <Link
                     href="/fees-and-scholarships"
-                    className="block px-4 py-2 text-sm text-gray-400 hover:text-[#00ff88] transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary transition-colors"
                   >
                     Fees and scholarship
                   </Link>
@@ -157,7 +157,7 @@ export function Navigation() {
                 ? scrollToSection("apply")
                 : (window.location.href = "/#apply")
             }
-            className="bg-gradient-to-r from-[#ff6b35] to-[#f7931e] hover:from-[#ff7b45] hover:to-[#ffa32e] text-black font-bold text-sm px-6 py-2 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-[#ff6b35]/30"
+            className="bg-gradient-to-r from-brand-orange to-[#f7931e] hover:from-[#ff7b45] hover:to-[#ffa32e] text-black font-bold text-sm px-6 py-2 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-orange/30"
           >
             APPLY NOW
           </Button>

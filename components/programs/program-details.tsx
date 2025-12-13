@@ -52,11 +52,11 @@ export function ProgramDetails() {
     <section className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#ff6b35]/10 border border-[#ff6b35]/20 mb-6">
-            <span className="text-sm font-semibold text-[#ff6b35]">PROGRAM DETAILS</span>
+          <div className="inline-block px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/20 mb-6">
+            <span className="text-sm font-semibold text-brand-orange">PROGRAM DETAILS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black mb-6">
-            Everything You <span className="text-[#ff6b35]">Need to Know</span>
+            Everything You <span className="text-brand-orange">Need to Know</span>
           </h2>
         </div>
 
@@ -69,8 +69,8 @@ export function ProgramDetails() {
                 className="bg-gradient-to-br from-gray-900/50 to-black border border-white/10 rounded-2xl p-8"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[#00ff88]" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-2xl font-black">{detail.title}</h3>
                 </div>
@@ -78,7 +78,7 @@ export function ProgramDetails() {
                 <ul className="space-y-3">
                   {detail.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#00ff88] mt-2 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                       <span className="text-gray-300">{item}</span>
                     </li>
                   ))}

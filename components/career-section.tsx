@@ -34,12 +34,12 @@ export function CareerSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88] mb-6">
-            <span className="text-[#00ff88] text-xs font-bold tracking-wider uppercase">Career Accelerator</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary mb-6">
+            <span className="text-primary text-xs font-bold tracking-wider uppercase">Career Accelerator</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black mb-6 text-balance">
             Career Focus with{" "}
-            <span className="bg-gradient-to-r from-[#00ff88] to-[#00d4aa] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-[#00d4aa] bg-clip-text text-transparent">
               Live Projects
             </span>{" "}
             & Extended Internships
@@ -55,11 +55,11 @@ export function CareerSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-br from-[#1a1a1a] to-[#0d1117] border border-gray-800 rounded-2xl p-8 hover:border-[#00ff88] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00ff88]/10"
+              className="group relative bg-gradient-to-br from-[#1a1a1a] to-[#0d1117] border border-gray-800 rounded-2xl p-8 hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00ff88] to-[#00d4aa]" />
-              <div className="w-14 h-14 rounded-xl bg-[#00ff88]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-7 h-7 text-[#00ff88]" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-[#00d4aa]" />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
               <p className="text-gray-400 leading-relaxed text-sm">{feature.description}</p>

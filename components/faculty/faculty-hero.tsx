@@ -9,12 +9,12 @@ export function FacultyHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
-        <div className="inline-block mb-6 px-4 py-2 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-full">
-          <span className="text-[#00ff88] text-sm font-bold tracking-wider">WORLD-CLASS EDUCATORS</span>
+        <div className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
+          <span className="text-primary text-sm font-bold tracking-wider">WORLD-CLASS EDUCATORS</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-black mb-6 text-balance">
-          Learn from <span className="text-[#00ff88]">Industry Leaders</span> & Academic Experts
+          Learn from <span className="text-primary">Industry Leaders</span> & Academic Experts
         </h1>
 
         <p className="text-xl text-gray-400 max-w-3xl mx-auto text-pretty leading-relaxed">
@@ -25,19 +25,19 @@ export function FacultyHero() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
           <div>
-            <div className="text-4xl font-black text-[#00ff88] mb-2">50+</div>
+            <div className="text-4xl font-black text-primary mb-2">50+</div>
             <div className="text-sm text-gray-400 font-medium">Expert Faculty</div>
           </div>
           <div>
-            <div className="text-4xl font-black text-[#00ff88] mb-2">25+</div>
+            <div className="text-4xl font-black text-primary mb-2">25+</div>
             <div className="text-sm text-gray-400 font-medium">Years Avg Experience</div>
           </div>
           <div>
-            <div className="text-4xl font-black text-[#00ff88] mb-2">100+</div>
+            <div className="text-4xl font-black text-primary mb-2">100+</div>
             <div className="text-sm text-gray-400 font-medium">Research Publications</div>
           </div>
           <div>
-            <div className="text-4xl font-black text-[#00ff88] mb-2">15+</div>
+            <div className="text-4xl font-black text-primary mb-2">15+</div>
             <div className="text-sm text-gray-400 font-medium">Countries Represented</div>
           </div>
         </div>

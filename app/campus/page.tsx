@@ -15,9 +15,9 @@ export default function CampusPage() {
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 py-32">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88] mb-8">
-              <Building className="h-4 w-4 text-[#00ff88]" />
-              <span className="text-[#00ff88] text-xs font-bold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary mb-8">
+              <Building className="h-4 w-4 text-primary" />
+              <span className="text-primary text-xs font-bold tracking-wider uppercase">
                 World-Class Facilities
               </span>
             </div>
@@ -47,8 +47,6 @@ export default function CampusPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   )
 }

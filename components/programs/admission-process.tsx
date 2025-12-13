@@ -44,11 +44,11 @@ export function AdmissionProcess() {
     <section className="py-24 bg-gradient-to-b from-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/20 mb-6">
-            <span className="text-sm font-semibold text-[#00ff88]">ADMISSION PROCESS</span>
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <span className="text-sm font-semibold text-primary">ADMISSION PROCESS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black mb-6">
-            Your Journey <span className="text-[#00ff88]">Starts Here</span>
+            Your Journey <span className="text-primary">Starts Here</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             A simple, transparent admission process designed to identify passionate and talented individuals.
@@ -59,23 +59,23 @@ export function AdmissionProcess() {
           {steps.map((item, index) => (
             <div
               key={index}
-              className="relative bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-[#00ff88]/50 transition-all duration-300 group"
+              className="relative bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
             >
-              <div className="absolute top-6 right-6 text-6xl font-black text-white/5 group-hover:text-[#00ff88]/10 transition-colors">
+              <div className="absolute top-6 right-6 text-6xl font-black text-white/5 group-hover:text-primary/10 transition-colors">
                 {item.step}
               </div>
 
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#00ff88]" />
-                  <span className="text-sm font-bold text-[#00ff88]">{item.step}</span>
+                  <CheckCircle2 className="w-6 h-6 text-primary" />
+                  <span className="text-sm font-bold text-primary">{item.step}</span>
                 </div>
 
                 <h3 className="text-xl font-black mb-3">{item.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{item.description}</p>
 
-                <div className="inline-block px-3 py-1 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/20">
-                  <span className="text-xs font-semibold text-[#00ff88]">{item.timeline}</span>
+                <div className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                  <span className="text-xs font-semibold text-primary">{item.timeline}</span>
                 </div>
               </div>
             </div>
@@ -83,8 +83,8 @@ export function AdmissionProcess() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00ff88]/10 to-[#00cc6a]/10 border border-[#00ff88]/20">
-            <CheckCircle2 className="w-5 h-5 text-[#00ff88]" />
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary/10 to-[#00cc6a]/10 border border-primary/20">
+            <CheckCircle2 className="w-5 h-5 text-primary" />
             <span className="text-sm font-semibold text-gray-300">Applications for 2025 batch are now open!</span>
           </div>
         </div>
